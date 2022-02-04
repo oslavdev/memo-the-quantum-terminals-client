@@ -16,11 +16,15 @@ import {
 import StandBy from '@/components/Miscellaneous/StandBy'
 import Offline from '@/components/Miscellaneous/Offline'
 
-const size = 30 // size of the map
 
+
+/** 
+ * Generate game board
+ * */
+const boardSize = 30 
 const CellGen = () => {
   let components = []
-  for (let i = 1; i < size + 1; i++) {
+  for (let i = 1; i < boardSize + 1; i++) {
     components = [
       ...components,
       <Cell key={i} data-attr={i}>
@@ -34,6 +38,7 @@ const CellGen = () => {
   }
   return components
 }
+
 
 export default function GameBoard({ dialogueStatus, gameStatus, level }) {
 

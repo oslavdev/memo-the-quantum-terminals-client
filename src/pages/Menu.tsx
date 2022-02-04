@@ -6,7 +6,7 @@ import { Box } from '@/UI/Boxes/Box'
 import { Button } from '@/UI/Buttons/Primary'
 import { pathLogin, pathRegister, pathLobby } from '@/app/config/paths'
 import Loading from '@/UI/Loading/Loading'
-import createAnonimUser from '@/utils/offline_auth/createAnonimUser'
+import {createAnonimUser} from '@/utils/offline_auth/anonimUser'
 import { Header } from '@/UI/Text/Text'
 import { Input } from '@/UI/Inputs/FormInput'
 import State from "@/app/context/state/State";

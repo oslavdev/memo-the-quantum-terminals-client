@@ -9,6 +9,7 @@ import { meQuery, ME_QUERY } from '@/app/graphql/user'
 import { useCustomQuery } from '@/app/hooks/graphql/query'
 import Loading from '@/UI/Loading/Loading'
 import { Paragraph } from '@/UI/Text/Text'
+import { deleteAnonimUser } from '@/utils/offline_auth/anonimUser'
 
 export default function Lobby() {
   
@@ -18,7 +19,10 @@ export default function Lobby() {
   const mockedGame = JSON.parse(localStorage.getItem('game'))
 
   function handleLogout(){
-    alert("Logout")
+    alert("You will be logged out")
+    deleteAnonimUser()
+
+    navigate('/')
   }
 
   if (loading || !mockedGame) {
